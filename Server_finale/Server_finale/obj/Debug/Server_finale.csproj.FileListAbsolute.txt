@@ -1,0 +1,10 @@
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\bin\Debug\Server_finale.exe.config
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\bin\Debug\Server_finale.exe
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\bin\Debug\Server_finale.pdb
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.csprojAssemblyReference.cache
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.Properties.Resources.resources
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.csproj.GenerateResource.cache
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.exe
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.pdb
+C:\Users\Sebas\Desktop\Server_finale\Server_finale\obj\Debug\Server_finale.FormServer.resources
