@@ -39,6 +39,7 @@ namespace Server_finale
             this.immagine.Location = new System.Drawing.Point(250, 77);
             this.immagine.Name = "immagine";
             this.immagine.Size = new System.Drawing.Size(300, 300);
+            this.immagine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.immagine.TabIndex = 0;
             this.immagine.TabStop = false;
             // 

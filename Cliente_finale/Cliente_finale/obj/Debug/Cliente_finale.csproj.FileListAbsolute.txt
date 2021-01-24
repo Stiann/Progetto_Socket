@@ -18,3 +18,13 @@ C:\Users\Sebas\Desktop\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.cs
 C:\Users\Sebas\Desktop\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.csproj.CoreCompileInputs.cache
 C:\Users\Sebas\Desktop\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.exe
 C:\Users\Sebas\Desktop\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.pdb
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\bin\Debug\Cliente_finale.exe.config
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\bin\Debug\Cliente_finale.exe
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\bin\Debug\Cliente_finale.pdb
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.csprojAssemblyReference.cache
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.Form.resources
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.Properties.Resources.resources
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.csproj.GenerateResource.cache
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.exe
+C:\Users\Sebas\Desktop\Progetto_Socket\Cliente_finale\Cliente_finale\obj\Debug\Cliente_finale.pdb

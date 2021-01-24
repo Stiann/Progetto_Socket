@@ -34,6 +34,7 @@ namespace Cliente_finale
             this.SpostaNO = new System.Windows.Forms.Button();
             this.SpostaSO = new System.Windows.Forms.Button();
             this.SpostaSE = new System.Windows.Forms.Button();
+            this.Imm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SpostaCE
@@ -96,11 +97,25 @@ namespace Cliente_finale
             this.SpostaSE.UseVisualStyleBackColor = true;
             this.SpostaSE.Click += new System.EventHandler(this.SpostaSE_Click);
             // 
+            // Imm
+            // 
+            this.Imm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Imm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Imm.Enabled = false;
+            this.Imm.Location = new System.Drawing.Point(338, 12);
+            this.Imm.Name = "Imm";
+            this.Imm.Size = new System.Drawing.Size(125, 75);
+            this.Imm.TabIndex = 5;
+            this.Imm.Text = "Prossima Immagine";
+            this.Imm.UseVisualStyleBackColor = true;
+            this.Imm.Click += new System.EventHandler(this.Imm_Click);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Imm);
             this.Controls.Add(this.SpostaSE);
             this.Controls.Add(this.SpostaSO);
             this.Controls.Add(this.SpostaNO);
@@ -119,6 +134,7 @@ namespace Cliente_finale
         private System.Windows.Forms.Button SpostaNO;
         private System.Windows.Forms.Button SpostaSO;
         private System.Windows.Forms.Button SpostaSE;
+        private System.Windows.Forms.Button Imm;
     }
 }
 

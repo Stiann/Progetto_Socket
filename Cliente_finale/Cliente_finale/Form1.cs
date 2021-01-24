@@ -48,7 +48,7 @@ namespace Cliente_finale
         {
             string data = "";
             //gestione ricevi
-            byte[] bytes = new Byte[4];
+            byte[] bytes = new Byte[8];
                 while (data.IndexOf("$") == -1)
             {
                 int bytesRec = client.Receive(bytes);
@@ -66,7 +66,7 @@ namespace Cliente_finale
             {
                 
                 client.Connect(remoteEP);
-                
+                Console.WriteLine("Connesso con " + remoteEP.ToString());
                 connesso = "Connesso";
                 Text = "Server - " + connesso + " - Posizione immagine (" + x + "|" + y + ")";
                 
@@ -75,21 +75,27 @@ namespace Cliente_finale
                 SpostaNO.Enabled = true;
                 SpostaSO.Enabled = true;
                 SpostaSE.Enabled = true;
-                
+                Imm.Enabled = true;
+                string xy_string;
+                string[] xy;
                 while (client.Connected)
                 {
-                    x = Convert.ToInt32(ricevi());
-                    
-                    y = Convert.ToInt32(ricevi());
-                    
+                    //x = Convert.ToInt32(ricevi());
+                    //Thread.Sleep(100);
+                    //y = Convert.ToInt32(ricevi());
+                    xy_string = ricevi();
+                    xy = xy_string.Split('#');
+                    x = Convert.ToInt32(xy[0]);
+                    y = Convert.ToInt32(xy[1]);
                     Text = "Server - " + connesso + " - Posizione immagine (" + x + "|" + y + ")";
                 }
             }
-            catch
+            catch(Exception e)
             {
 
                 try
                 {
+                    Console.WriteLine("Eccezzione " + e.Message);
                     Text = "Client – Connessione non stabilita.";
                 }
                 catch { }
@@ -97,27 +103,27 @@ namespace Cliente_finale
         }
         private void SpostaCE_Click(object sender, EventArgs e)
         {
-            invia(SpostaCE.Text);
+            invia("21#" + SpostaCE.Text);
         }
 
         private void SpostaSO_Click(object sender, EventArgs e)
         {
-            invia(SpostaSO.Text);
+            invia("21#" + SpostaSO.Text);
         }
 
         private void SpostaNO_Click(object sender, EventArgs e)
         {
-            invia(SpostaNO.Text);
+            invia("21#" + SpostaNO.Text);
         }
 
         private void SpostaNE_Click(object sender, EventArgs e)
         {
-            invia(SpostaNE.Text);
+            invia("21#" + SpostaNE.Text);
         }
 
         private void SpostaSE_Click(object sender, EventArgs e)
         {
-            invia(SpostaSE.Text);
+            invia("21#" + SpostaSE.Text);
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -125,6 +131,11 @@ namespace Cliente_finale
             Thread t = new Thread(new ThreadStart(connetti));
             t.IsBackground = true;
             t.Start();
+        }
+
+        private void Imm_Click(object sender, EventArgs e)
+        {
+            invia("23#NEXT");
         }
     }
 }

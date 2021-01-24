@@ -18,6 +18,7 @@ namespace Server_finale
         private static string posizione = "CE";
         private static int x = 0;
         private static int y = 0;
+        private static int i = 1;
         private static string connesso = "Disconnesso";
 
         private static IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
@@ -39,6 +40,15 @@ namespace Server_finale
             Thread ascolta = new Thread(new ThreadStart(gestisciSocket));
             ascolta.IsBackground = true;
             ascolta.Start();
+        }
+        private void Foto()
+        {
+            i++;
+            immagine.Load($"immagini/immagine{i}.jpg");
+            if(i == 3)
+            {
+                i = 0;
+            }
         }
         public void aggPosizione()
         {
@@ -105,7 +115,7 @@ namespace Server_finale
 
             connesso = "Connesso";
             
-            Thread t1 = new Thread(new ParameterizedThreadStart(posizioni));
+            Thread t1 = new Thread(new ParameterizedThreadStart(ricevitore));
             t1.IsBackground = true;
             t1.Start(handler);
 
@@ -116,11 +126,7 @@ namespace Server_finale
                 Thread.Sleep(1);
                 if (x1 != x || y1 != y)
                 {
-                    invia(handler, Convert.ToString(x));
-                    //ricevi(handler);
-
-                    invia(handler, Convert.ToString(y));
-                    //ricevi(handler);
+                    invia(handler, Convert.ToString(x)+ "#"+ Convert.ToString(y));
                 }
                 x1 = x;
                 y1 = y;
@@ -129,7 +135,7 @@ namespace Server_finale
             handler.Shutdown(SocketShutdown.Both);
             handler.Close();
         }
-        private static void invia(Socket handler, string da_inviare)
+        private void invia(Socket handler, string da_inviare)
         {
             //gestione dell'invio
             da_inviare += '$';
@@ -142,12 +148,31 @@ namespace Server_finale
             }
             catch { }
         }
-
-        private static string ricevi(Socket handler)
+        private void ricevitore(Object a)
+        {
+            Socket handler = (Socket)a;
+            string ricevuto;
+            string[] codice;
+            while (handler.Connected)
+            {
+                ricevuto = ricevi(handler);
+                codice = ricevuto.Split('#');
+                if (codice[0] == "21")
+                {
+                    posizione = codice[1];
+                    aggPosizione();
+                }
+                else if (codice[0] == "23")
+                {
+                    Foto();
+                }
+            }
+        }
+        private string ricevi(Socket handler)
         {
             string data = "";
             //gestione del ricevi
-            byte[] bytes = new Byte[4];
+            byte[] bytes = new Byte[8];
             try
             {
                 while (data.IndexOf("$") == -1)
