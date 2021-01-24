@@ -34,7 +34,7 @@ namespace Server_finale
         }
         private void Form_Load(object sender, EventArgs e)
         {
-            immagine.Load("immagine.jpg");
+            immagine.Load("/immagini/immagine1.jpg");
             aggPosizione();
             Thread ascolta = new Thread(new ThreadStart(gestisciSocket));
             ascolta.IsBackground = true;
